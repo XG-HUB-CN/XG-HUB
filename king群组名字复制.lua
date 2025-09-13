@@ -2,7 +2,7 @@
 -- 执行后直接将指定内容复制到剪贴板
 
 -- 设置要复制的文本内容
-local textToCopy = "jygxhzrydfifiyf"
+local textToCopy = "Linni_Hub"
 
 -- 检测平台
 local isMobile = (game:GetService("UserInputService").TouchEnabled and not game:GetService("UserInputService").KeyboardEnabled)
