@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>手机版Roblox公告UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            touch-action: manipulation;
+        }
+        
+        .announcement-container {
+            width: 100%;
+            max-width: 95%;
+            background: #2d2d40;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+        
+        .header {
+            background: linear-gradient(90deg, #ff7e00 0%, #ff5500 100%);
+            padding: 16px 20px;
+            position: relative;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .header::before, .header::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.3);
+            width: 20%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .header::before {
+            left: 15px;
+        }
+        
+        .header::after {
+            right: 15px;
+        }
+        
+        .title {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+        
+        .corner-text {
+            position: absolute;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .corner-left {
+            top: 10px;
+            left: 15px;
+        }
+        
+        .corner-right {
+            top: 10px;
+            right: 15px;
+        }
+        
+        .content {
+            padding: 20px;
+            max-height: 50vh;
+            overflow-y: auto;
+            color: #e1e1e1;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+        
+        .content h3 {
+            color: #ff7e00;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        
+        .content p {
+            margin-bottom: 12px;
+        }
+        
+        .content ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .content li {
+            margin-bottom: 8px;
+        }
+        
+        .footer {
+            padding: 15px;
+            background: #23232e;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .confirm-btn {
+            background: linear-gradient(90deg, #ff7e00 0%, #ff5500 100%);
+            color: white;
+            border: none;
+            padding: 14px 50px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 200px;
+        }
+        
+        .confirm-btn:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 移动设备优化 */
+        @media (max-width: 480px) {
+            .header {
+                padding: 14px 15px;
+            }
+            
+            .title {
+                font-size: 20px;
+            }
+            
+            .corner-text {
+                font-size: 9px;
+            }
+            
+            .content {
+                padding: 15px;
+                font-size: 13px;
+            }
+            
+            .confirm-btn {
+                padding: 12px 40px;
+                font-size: 15px;
+            }
+        }
+        
+        /* 滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #23232e;
+            border-radius: 3px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #ff7e00;
+            border-radius: 3px;
+        }
+        
+        /* 防止文本选择 */
+        .no-select {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="announcement-container no-select">
+        <div class="header">
+            <div class="corner-text corner-left">XG制作</div>
+            <div class="title">公告</div>
+            <div class="corner-text corner-right">XG脚本整合</div>
+        </div>
+        
+        <div class="content">
+            <h3>欢迎使用XG脚本整合移动版！</h3>
+            <p>感谢您选择我们的服务，以下是重要公告内容：</p>
+            
+            <ul>
+                <li>服务器将于本周六进行维护，预计耗时2小时</li>
+                <li>新增了5个独家小游戏场景，欢迎体验</li>
+                <li>优化了脚本执行效率，提升运行流畅度</li>
+                <li>修复了已知的3个主要bug</li>
+                <li>增加了新的玩家互动功能</li>
+                <li>移动端操作已优化，触摸更流畅</li>
+                <li>新增了移动设备专属活动</li>
+            </ul>
+            
+            <p>请注意遵守游戏规则，文明游戏，共同营造良好的游戏环境。任何作弊行为都将受到处罚。</p>
+            
+            <p>如有任何问题，请联系客服支持。感谢您的理解与支持！</p>
+            
+            <p>更多更新内容请关注我们的官方频道，我们将持续为您带来优质的游戏体验。</p>
+            
+            <p>移动设备使用提示：</p>
+            <ul>
+                <li>确保使用最新版本的应用</li>
+                <li>保持网络连接稳定</li>
+                <li>定期清理缓存以提升性能</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <button class="confirm-btn" id="confirmButton">确定</button>
+        </div>
+    </div>
+
+    <script>
+        // 添加触摸反馈
+        const confirmButton = document.getElementById('confirmButton');
+        
+        confirmButton.addEventListener('touchstart', function() {
+            this.style.opacity = '0.8';
+        });
+        
+        confirmButton.addEventListener('touchend', function() {
+            this.style.opacity = '1';
+        });
+        
+        // 关闭公告
+        confirmButton.addEventListener('click', closeAnnouncement);
+        
+        function closeAnnouncement() {
+            document.querySelector('.announcement-container').style.display = 'none';
+            // 在实际环境中，这里应该隐藏或销毁UI
+            // 例如：script.Parent.Enabled = false
+        }
+        
+        // 防止长按菜单出现
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
