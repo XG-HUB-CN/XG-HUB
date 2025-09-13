@@ -40,7 +40,7 @@ title.Name = "Title"
 title.Size = UDim2.new(0, 100, 0, 30)
 title.Position = UDim2.new(0.5, -50, 0.5, -15)
 title.BackgroundTransparency = 1
-title.Text = "公告"
+title.Text = "走马观花卡密查询"
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.Font = Enum.Font.SourceSansBold
 title.TextSize = 24
@@ -165,4 +165,4 @@ fadeIn:Play()
 headerFadeIn:Play()
 buttonFadeIn:Play()
 
-print("XG脚本公告UI已加载完成！")
+print("XG脚本UI已加载完成！")
