@@ -40,12 +40,6 @@ local mainFrameCorner = Instance.new("UICorner")
 mainFrameCorner.CornerRadius = UDim.new(0, 20)
 mainFrameCorner.Parent = MainFrame
 
--- 主背景模糊效果
-local MainBlur = Instance.new("UIGaussianBlurEffect")
-MainBlur.Name = "MainBackgroundBlur"
-MainBlur.Radius = 8
-MainBlur.Parent = MainFrame
-
 -- 顶部分割条
 local TopDivider = Instance.new("Frame")
 TopDivider.Name = "TopDivider"
@@ -185,8 +179,7 @@ TopDivider.InputBegan:Connect(function(input)
             activeTouchId = input.TouchId
             startDrag(touchPos)
         end
-    end
-end)
+    end)
 
 -- 更新拖动位置（添加屏幕边界判断）
 local function updateDrag(currentPos)
@@ -367,3 +360,6 @@ BagEmptyTip.Parent = BagFunction
 
 -- 功能区：商店
 local ShopFunction = Instance.new("Frame")
+ShopFunction.Name = "商店Function"
+ShopFunction.Size = UDim2.new(0.7, 0, 0.86, 0)
+ShopFunction.Position = UDim2.new(0.29, 0, 0
