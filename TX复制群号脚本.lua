@@ -2,7 +2,7 @@
 -- 执行后直接将指定内容复制到剪贴板
 
 -- 设置要复制的文本内容
-local textToCopy = "jygxhzrydfifiyf"
+local textToCopy = "脚本群:160369111"
 
 -- 检测平台
 local isMobile = (game:GetService("UserInputService").TouchEnabled and not game:GetService("UserInputService").KeyboardEnabled)
@@ -52,13 +52,13 @@ local function copyToClipboard(text)
         
         if success then
             if result then
-                print("文本已成功复制到剪贴板!")
+                print("复制到剪贴板啦!")
             else
-                print("文本已选择，请手动复制 (长按并选择复制)")
+                print("手动复制一下吧！ (长按并选择复制)")
             end
         else
-            warn("复制失败: " .. tostring(result))
-            print("请手动复制以下文本:")
+            warn("没用成功唉: " .. tostring(result))
+            print("手动复制一下吧！:")
             print(text)
         end
     else
@@ -66,18 +66,18 @@ local function copyToClipboard(text)
         local success, err = pcall(function()
             if setclipboard then
                 setclipboard(text)
-                print("文本已成功复制到剪贴板!")
+                print("复制到剪贴板啦!")
             else
                 -- 备用方法
                 local ClipboardService = game:GetService("ClipboardService")
                 ClipboardService:SetString(text)
-                print("文本已成功复制到剪贴板!")
+                print("复制到剪贴板啦！")
             end
         end)
         
         if not success then
-            warn("复制失败: " .. tostring(err))
-            print("请手动复制以下文本:")
+            warn("没有成功诶 再试一次..: " .. tostring(err))
+            print("还是没有成功 要不手动复制一下呗:")
             print(text)
         end
     end
