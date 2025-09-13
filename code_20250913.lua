@@ -3,14 +3,12 @@ local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 local TouchInputService = game:GetService("TouchInputService")
 local LocalPlayer = Players.LocalPlayer
-local PlayerGui = LocalPlayer:WaitForChild("PlayerGui") -- 确保PlayerGui加载完成
+local PlayerGui = LocalPlayer:WaitForChild("PlayerGui") -- 确保PlayerGui加载
 
 -- 手机端专属配置
 local PhoneConfig = {
     MainSize = UDim2.new(0.9, 0, 0.75, 0),
     MainPos = UDim2.new(0.05, 0, 0.12, 0),
-    MinBtnSize = UDim2.new(0, 120, 0, 50),
-    CategoryBtnHeight = 0.28,
     PressScale = 0.96,
     PressTransparency = 0.4,
     DragTipHeight = 12,
@@ -23,7 +21,6 @@ local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "XG_Script_UI"
 ScreenGui.Parent = PlayerGui
 ScreenGui.IgnoreGuiInset = true
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 local MainFrame = Instance.new("Frame")
 MainFrame.Name = "MainFrame"
@@ -35,7 +32,7 @@ MainFrame.Visible = true
 MainFrame.ClipsDescendants = true
 MainFrame.Parent = ScreenGui
 
--- 为 MainFrame 添加 UICorner
+-- 为 MainFrame 添加圆角
 local mainFrameCorner = Instance.new("UICorner")
 mainFrameCorner.CornerRadius = UDim.new(0, 20)
 mainFrameCorner.Parent = MainFrame
@@ -49,7 +46,7 @@ TopDivider.BackgroundColor3 = Color3.new(1, 1, 1)
 TopDivider.BackgroundTransparency = 0.6
 TopDivider.Parent = MainFrame
 
--- 为 TopDivider 添加 UICorner
+-- 为 TopDivider 添加圆角
 local topDividerCorner = Instance.new("UICorner")
 topDividerCorner.CornerRadius = UDim.new(0, 20)
 topDividerCorner.Parent = TopDivider
@@ -63,7 +60,7 @@ DragTipBar.BackgroundColor3 = Color3.new(0.6, 0.6, 0.6)
 DragTipBar.BackgroundTransparency = 0.5
 DragTipBar.Parent = TopDivider
 
--- 为 DragTipBar 添加 UICorner
+-- 为 DragTipBar 添加圆角
 local dragTipBarCorner = Instance.new("UICorner")
 dragTipBarCorner.CornerRadius = UDim.new(0, 6)
 dragTipBarCorner.Parent = DragTipBar
@@ -118,7 +115,7 @@ CloseBtn.TextScaled = true
 CloseBtn.TextSizeConstraint = Enum.TextSizeConstraint.MaxSize
 CloseBtn.MaxTextSize = 32
 
--- 为 CloseBtn 添加 UICorner
+-- 为 CloseBtn 添加圆角
 local closeBtnCorner = Instance.new("UICorner")
 closeBtnCorner.CornerRadius = UDim.new(0, 15)
 closeBtnCorner.Parent = CloseBtn
@@ -247,7 +244,7 @@ CategoryFrame.BackgroundColor3 = Color3.new(0.18, 0.18, 0.18)
 CategoryFrame.BackgroundTransparency = 0.3
 CategoryFrame.Parent = MainFrame
 
--- 为 CategoryFrame 添加 UICorner
+-- 为 CategoryFrame 添加圆角
 local categoryFrameCorner = Instance.new("UICorner")
 categoryFrameCorner.CornerRadius = UDim.new(0, 15)
 categoryFrameCorner.Parent = CategoryFrame
@@ -265,8 +262,8 @@ local currentSelectIndex = 1
 local function createCategoryBtn(index, data)
     local btn = Instance.new("TextButton")
     btn.Name = data.Name .. "Btn"
-    btn.Size = UDim2.new(0.9, 0, PhoneConfig.CategoryBtnHeight, 0)
-    btn.Position = UDim2.new(0.05, 0, (index-1)*(PhoneConfig.CategoryBtnHeight + 0.02), 0)
+    btn.Size = UDim2.new(0.9, 0, 0.28, 0)
+    btn.Position = UDim2.new(0.05, 0, (index - 1) * (0.28 + 0.02), 0)
     btn.BackgroundColor3 = index == currentSelectIndex and data.SelectColor or data.Color
     btn.BackgroundTransparency = 0.25
     btn.Text = data.Name
@@ -276,7 +273,7 @@ local function createCategoryBtn(index, data)
     btn.MaxTextSize = 22
     btn.Font = Enum.Font.Bold
 
-    -- 为分类按钮添加 UICorner
+    -- 为分类按钮添加圆角
     local btnCorner = Instance.new("UICorner")
     btnCorner.CornerRadius = UDim.new(0, 12)
     btnCorner.Parent = btn
@@ -341,7 +338,7 @@ BagFunction.BackgroundTransparency = 0.5
 BagFunction.Visible = true
 BagFunction.Parent = MainFrame
 
--- 为 BagFunction 添加 UICorner
+-- 为 BagFunction 添加圆角
 local bagFunctionCorner = Instance.new("UICorner")
 bagFunctionCorner.CornerRadius = UDim.new(0, 15)
 bagFunctionCorner.Parent = BagFunction
@@ -362,4 +359,8 @@ BagEmptyTip.Parent = BagFunction
 local ShopFunction = Instance.new("Frame")
 ShopFunction.Name = "商店Function"
 ShopFunction.Size = UDim2.new(0.7, 0, 0.86, 0)
-ShopFunction.Position = UDim2.new(0.29, 0, 0
+ShopFunction.Position = UDim2.new(0.29, 0, 0.14, 0)
+ShopFunction.BackgroundColor3 = Color3.new(0.15, 0.15, 0.15)
+ShopFunction.BackgroundTransparency = 0.5
+ShopFunction.Visible = false
+ShopFunction.
