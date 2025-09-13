@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>手机版Roblox公告UI</title>
+    <title>走马观花卡密查看</title>
     <style>
         * {
             margin: 0;
@@ -200,35 +200,15 @@
         </div>
         
         <div class="content">
-            <h3>欢迎使用XG脚本整合移动版！</h3>
-            <p>感谢您选择我们的服务，以下是重要公告内容：</p>
-            
-            <ul>
-                <li>服务器将于本周六进行维护，预计耗时2小时</li>
-                <li>新增了5个独家小游戏场景，欢迎体验</li>
-                <li>优化了脚本执行效率，提升运行流畅度</li>
-                <li>修复了已知的3个主要bug</li>
-                <li>增加了新的玩家互动功能</li>
-                <li>移动端操作已优化，触摸更流畅</li>
-                <li>新增了移动设备专属活动</li>
+            <h3>欢迎使用XG脚本整合脚本！</h3>
+            <p>目前走马观花官方未公布卡密 </p>
             </ul>
-            
-            <p>请注意遵守游戏规则，文明游戏，共同营造良好的游戏环境。任何作弊行为都将受到处罚。</p>
-            
-            <p>如有任何问题，请联系客服支持。感谢您的理解与支持！</p>
-            
-            <p>更多更新内容请关注我们的官方频道，我们将持续为您带来优质的游戏体验。</p>
-            
-            <p>移动设备使用提示：</p>
-            <ul>
-                <li>确保使用最新版本的应用</li>
-                <li>保持网络连接稳定</li>
-                <li>定期清理缓存以提升性能</li>
+            <p>有卡密时我们会公布 </p>
             </ul>
         </div>
         
         <div class="footer">
-            <button class="confirm-btn" id="confirmButton">确定</button>
+            <button class="confirm-btn" id="confirmButton">好的呢</button>
         </div>
     </div>
 
