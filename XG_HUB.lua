@@ -15,6 +15,9 @@ local Tab1 = Window:CreateTab("公告")
 local Tab2 = Window:CreateTab("走马观花X")
 local Tab3 = Window:CreateTab("退休TX")
 local Tab4 = Window:CreateTab("king")
+local Tab5 = Window:CreateTab("冷全源")
+local Tab6 = Window:CreateTab("待更新")
+
 
 --公告
 local ButtonExample = Tab1:CreateButton({
@@ -81,7 +84,7 @@ local ButtonExample = Tab3:CreateButton({
 })
 
 --TX复制群号
-local ButtonExample = Tab3:CreateButton({
+local ButtonExample = Tab23:CreateButton({
     Name = "点击复制qq群号",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/XG-HUB-CN/XG-HUB/refs/heads/main/TX复制群号脚本.lua"))()
@@ -113,5 +116,53 @@ local ButtonExample = Tab4:CreateButton({
     Name = "点击复制群组名字",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/XG-HUB-CN/XG-HUB/refs/heads/main/king群组名字复制.lua"))()
+    end,
+})
+
+--冷伐木
+local ButtonExample = Tab5:CreateButton({
+    Name = "伐木大亨",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XG-HUB-CN/XG-HUB/refs/heads/main/伐木大亨.lua"))()
+    end,
+})
+
+--冷火箭发射
+local ButtonExample = Tab5:CreateButton({
+    Name = "火箭发射模拟器",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XG-HUB-CN/XG-HUB/refs/heads/main/重做火箭发射模拟器.lua"))()
+    end,
+})
+
+--冷力量
+local ButtonExample = Tab5:CreateButton({
+    Name = "力量传奇",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XG-HUB-CN/XG-HUB/refs/heads/main/力量传奇.lua"))()
+    end,
+})
+
+--狗熊岭
+local ButtonExample = Tab5:CreateButton({
+    Name = "狗熊岭",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XG-HUB-CN/XG-HUB/refs/heads/main/狗熊岭.lua"))()
+    end,
+})
+
+--冷力量
+local ButtonExample = Tab2:CreateButton({
+    Name = "力量传奇",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XG-HUB-CN/XG-HUB/refs/heads/main/力量传奇.lua"))()
+    end,
+})
+
+--冷门
+local ButtonExample = Tab2:CreateButton({
+    Name = "冷.门",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XG-HUB-CN/XG-HUB/refs/heads/main/Doors.lua"))()
     end,
 })
