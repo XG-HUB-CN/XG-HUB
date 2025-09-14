@@ -84,7 +84,7 @@ local ButtonExample = Tab3:CreateButton({
 })
 
 --TX复制群号
-local ButtonExample = Tab23:CreateButton({
+local ButtonExample = Tab3:CreateButton({
     Name = "点击复制qq群号",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/XG-HUB-CN/XG-HUB/refs/heads/main/TX复制群号脚本.lua"))()
